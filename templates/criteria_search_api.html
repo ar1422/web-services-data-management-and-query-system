@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href= "{{url_for('static', path = '/style.css')}}" rel="stylesheet">
+<title> Search APIs by Criteria</title>
+
+</head>
+
+<body>
+<header>
+       <img src="{{url_for('static', path = '/rit_logo.png')}}">
+       <nav>
+            <ul>
+                <li><a href="/criteria_search/search_api_e">Search APIs by Criteria</a></li>
+                <li><a href="/criteria_search/search_mashup_e">Search Mashups by Criteria series</a></li>
+                <li><a href="/keyword_search/search_api_e">Search APIs by Keywords</a></li>
+                <li><a href="/keyword_search/search_mashup_e">Search Mashups by Keywords</a></li>
+            </ul>
+        </nav>
+</header>
+
+<div id="feedback-form">
+  <h2 class="header">Search APIs by Criteria</h2>
+  <form class="search_box" action="/criteria_search/search_api" style="margin:auto;max-width:300px" method="get">
+
+    <label for="id">ID</label>
+    <input type="text" id="id" name="id" placeholder="">
+
+    <label for="category">Category</label>
+    <input type="text" id="category" name="category" placeholder="">
+
+    <label for="protocols">Protocols</label>
+    <input type="text" id="protocols" name="protocols" placeholder="">
+
+    <label for="dataFormats">dataFormats</label>
+    <input type="text" id="dataFormats" name="dataFormats" placeholder="">
+
+    <label for="updated">Updated Year</label>
+    <input type="text" id="updated" name="updated" placeholder="">
+
+    <label for="Tags">Tags</label>
+    <input type="text" id="Tags" name="Tags" placeholder="">
+
+    <label for="rating">Rating</label>
+    <input type="text" id="rating" name="rating" placeholder="e.g. >4.5, >= 3.5, <3.2, <=4.5">
+
+    <button type="submit">Search</button>
+</form>
+</div>
+</body>
+</html>
